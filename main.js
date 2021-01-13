@@ -5,13 +5,6 @@
 // se l'immagine attiva ha la classe last, al click su next, aggiungi l'active all'immagine con classe first
 var imgLast = ('.slider-wrapper .images img.active.last')
 var imgFirst =('.slider-wrapper .images img.first')
-//
-
-if (imgLast) {
-  img.First.addClass('active');
-}
-
-
 
 
 $(document).ready(function () {
@@ -19,6 +12,10 @@ $(document).ready(function () {
   // su next clicco
 
   $('.next').click(function(){
+    if (imgLast) {
+      img.First.addClass('active');
+    }
+
 
       $('.slider-wrapper .images img.active').removeClass('active').next().addClass('active');
 
