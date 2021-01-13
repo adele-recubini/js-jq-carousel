@@ -47,7 +47,7 @@ $(document).ready(function () {
 
    // stessa cosa per i pallini
 
-   $('.nav > i').click(function(){
+   $('.nav>i').click(function(){
 
      // assegno una variabile al pallino colorato cioe in active e poi gli rimuovo la classe dal primo a quarto
 
