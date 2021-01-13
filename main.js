@@ -8,7 +8,9 @@ $(document).ready(function () {
     $('.slider-wrapper .images img.active').removeClass('active').next().addClass('active');
   })
 
-
+  $('.prev').click(function(){
+    $('.slider-wrapper .images img.active').removeClass('active').next().addClass('active')
+  })
 
 
 })
