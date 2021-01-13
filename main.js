@@ -28,11 +28,13 @@ $(document).ready(function () {
 
 
   // sul prev clicco
+
   $('.prev').click(function(){
     // creo variabile dell immagine con la classe active
     var activeImg = $('.images img.active')
     // poi la rimuovo
     activeImg.removeClass('active')
+
     // inizio l if
     if (activeImg.hasClass('first')) {
       var lastImg =$('.images img.last')
@@ -47,25 +49,36 @@ $(document).ready(function () {
 
    $('.nav > i').click(function(){
 
-     // assegno una variabile al pallino colorato cioe in active e poi gli rimuovo la classe
+     // assegno una variabile al pallino colorato cioe in active e poi gli rimuovo la classe dal primo a quarto
 
      var activeCircle =$('.nav >i.active')
      activeCircle.removeClass('active')
 
      if (activeCircle.hasClass('last')) {
-        var firstcircle = $('.nav >i.first')
-        firstcircle.addClass('active')
-
-     }else {
+        var firstCircle = $('.nav >i.first')
+        firstCircle.addClass('active')
+      }
+      else {
        activeCircle.next().addClass('active')
-     }
+      }
+     })
+
+      // var activeCircle =$('.nav >i.active')
+      // activeCircle.removeClass('active')
+      //
+      //
+      // if (activeCircle.hasClass('first')) {
+      //   var lastCircle =  $('.nav >i.last')
+      //   lastCircle.addClass('active')
+      // }
+      // else {
+      //  activeCircle.next().addClass('active')
+      // }
+      //
 
 
-   })
 
 
- })
 
-//  Bonus:
-// Clicchiamo sui pallini e mostriamo l’immagine corrispondente
-// Generiamo i pallini con JS cioe inserire tag su hatml con jquery
+    // fine document
+  })
