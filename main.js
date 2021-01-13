@@ -5,6 +5,7 @@
 // se l'immagine attiva ha la classe last, al click su next, aggiungi l'active all'immagine con classe first
 
 
+
 $(document).ready(function () {
 
   // su next clicco
@@ -41,4 +42,30 @@ $(document).ready(function () {
       activeImg.prev().addClass('active')
     }
    })
+
+   // stessa cosa per i pallini
+
+   $('.nav > i').click(function(){
+
+     // assegno una variabile al pallino colorato cioe in active e poi gli rimuovo la classe
+
+     var activeCircle =$('.nav >i.active')
+     activeCircle.removeClass('active')
+
+     if (activeCircle.hasClass('last')) {
+        var firstcircle = $('.nav >i.first')
+        firstcircle.addClass('active')
+
+     }else {
+       activeCircle.next().addClass('active')
+     }
+
+
+   })
+
+
  })
+
+//  Bonus:
+// Clicchiamo sui pallini e mostriamo l’immagine corrispondente
+// Generiamo i pallini con JS cioe inserire tag su hatml con jquery
