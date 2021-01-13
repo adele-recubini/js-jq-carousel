@@ -25,33 +25,20 @@ $(document).ready(function () {
   }
   })
 
+
   // sul prev clicco
   $('.prev').click(function(){
-    $('.slider-wrapper .images img.active').removeClass('active').prev().addClass('active')
-  })
-
-})
-
-
-
-
-
-
-
-
-
-
-
-
-//
-// $(document).ready(function() {
-//
-//   $('.button-next').click(function() {
-//     $('.slider-box.active').removeClass('active').next().addClass('active');
-//   })
-//
-//   $('.button-prev').click(function() {
-//     $('.slider-box.active').removeClass('active').prev().addClass('active');
-//   })
-//
-// })
+    // creo variabile dell immagine con la classe active
+    var activeImg = $('.images img.active')
+    // poi la rimuovo
+    activeImg.removeClass('active')
+    // inizio l if
+    if (activeImg.hasClass('first')) {
+      var lastImg =$('.images img.last')
+      // inserisco l active nell immgine con la classe last
+      lastImg.addClass('active')
+    }else {
+      activeImg.prev().addClass('active')
+    }
+   })
+ })
