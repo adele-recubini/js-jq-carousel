@@ -1,7 +1,4 @@
 
-// inseriamo tutto nel document
-
-// e poi gli dico che
 // se l'immagine attiva ha la classe last, al click su next, aggiungi l'active all'immagine con classe first
 // faccio la stessa identica cosa con i pallini il discorso è lo stesso
 // creo due funzioni che richiamo all interno di document
@@ -72,7 +69,24 @@ $(document).ready(function () {
     prev();
 
   })
+    // ora bisogna dire che se clicco un tasto sulla tastiera a destra vado su next e prev in base al tasto destro e sinistro della tastiera
+
+    $(document).keydown(function(e) {
+      if (e.which === 39) {
+        next();
+      }
+
+      if (e.which === 37) {
+        prev();
+      }
+
+
+    })
 
 
     // fine document
   })
+
+
+
+  // ora bisogna dire che se clicco un tasto sulla tastiera a destra vado sul next delle img sul sinistro a prev
